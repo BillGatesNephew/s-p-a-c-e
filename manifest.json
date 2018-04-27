@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "S p a c e",
+  "description": "Space lets you type l i k e t h i s",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png"
+  },
+  "permissions": [
+   "activeTab"
+ ],
+
+    "content_scripts": [
+   {
+     "matches": ["http://*/*", "https://*/*"],
+     "js": ["js/jquery-min.js","js/main.js"],
+     "run_at": "document_end"
+   }
+   ]
+}
